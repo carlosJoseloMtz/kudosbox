@@ -1,12 +1,12 @@
 {
-  "name": "reactsample",
+  "name": "KudosBox",
   "version": "1.0.0",
-  "description": "",
+  "description": "Implementation for a KudoBox application to send kudos in a team to spread love :)",
   "private": true,
   "scripts": {
-    "build:dev": "eslint ./app/ && webpack",
+    "build:dev": "eslint ./app/ -c eslint-dev.json && webpack",
     "build:prod": "eslint ./app/ && webpack -p",
-    "local": "eslint ./app/ && webpack-dev-server --inline"
+    "local": "eslint ./app/ -c eslint-dev.json && webpack-dev-server --inline"
   },
   "author": "ObjectWave Corp.",
   "license": "ISC",
