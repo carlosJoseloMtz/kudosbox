@@ -1,0 +1,30 @@
+{
+  "plugins": [
+    "react"
+  ],
+
+  "extends": ["eslint:all", "plugin:react/all"],
+
+  "parser": "babel-eslint",
+
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true,
+      "modules": true
+    }
+  },
+
+  "rules": {
+    "react/jsx-indent": [2, 2],
+    "react/jsx-filename-extension": [1, { "extensions": [ ".js", ".jsx" ] } ],
+    "quotes": [1, "single"],
+    "semi": [1, "never"],
+    "no-extra-parens": [2, "functions"],
+    "react/display-name": [0],
+    "sort-imports": [0]
+  },
+
+  "globals": {
+    "document": true
+  }
+} 
