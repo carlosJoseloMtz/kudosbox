@@ -20,6 +20,9 @@ module.exports = {
     ]
   },
   devServer: {
-    inline: true
+    inline: true,
+    historyApiFallback: {
+      index: 'index.html'
+    }
   }
 }

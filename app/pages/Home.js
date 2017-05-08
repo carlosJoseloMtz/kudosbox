@@ -18,10 +18,18 @@ export default class Home extends React.Component {
     })
   }
 
-  shouldDisplayEditor () {
-    return this.state.displayKudoEditor
-        ? <KudoCardEditor display={this.state.displayKudoEditor} />
-        : ''
+  handleCloseEditor () {
+    this.setState({
+      displayKudoEditor: false
+    })
+  }
+
+  displayEditor () {
+    if (this.state.displayKudoEditor) {
+      return <KudoCardEditor handleClose={this.handleCloseEditor.bind(this)} />
+    }
+
+    return ''
   }
 
   render () {
@@ -35,7 +43,7 @@ export default class Home extends React.Component {
           {'Tell someone how awesome he/she\'s been to the team'}
         </button>
         <hr />
-        {this.shouldDisplayEditor()}
+        {this.displayEditor()}
       </div>
     )
   }

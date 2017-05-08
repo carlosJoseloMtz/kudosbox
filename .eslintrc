@@ -29,6 +29,9 @@
     "react/jsx-no-bind": [0],
     "object-curly-newline": [0],
     "react/no-set-state": [0],
+    "arrow-body-style": [0],
+    "one-var": [0],
+    "no-undefined": [0],
     "no-ternary": [0]
   },
 
