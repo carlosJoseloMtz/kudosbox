@@ -32,6 +32,7 @@
     "arrow-body-style": [0],
     "one-var": [0],
     "no-undefined": [0],
+    "react/no-array-index-key": [0],
     "no-ternary": [0]
   },
 

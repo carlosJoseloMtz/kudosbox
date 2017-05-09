@@ -20,13 +20,14 @@ class KudoCardEditor extends React.Component {
     })
   }
 
-  addLineBreaks () {
-    const lines = this.state.content.split('\n').map((itm, key) => {
-        return <span>{itm} <br /></span>
-    })
+  handleSaveKudo () {
+    console.log('saving kudo', this.state.content)
+    // TODO hit the API
+    this.props.handleClose()
+  }
 
-    console.log('returning', lines)
-    return lines
+  addLineBreaks () {
+    return this.state.content.split('\n').join('<br />')
   }
 
   render () {
@@ -37,12 +38,22 @@ class KudoCardEditor extends React.Component {
     return (
       <div>
         <button onClick={this.props.handleClose}>{'X'}</button>
-        <textarea onChange={this.handleContentChange.bind(this)} style={textAreaStyle}>{this.state.content}</textarea>
+        <textarea
+            defaultValue={this.state.content}
+            onChange={this.handleContentChange.bind(this)}
+            style={textAreaStyle}
+        />
 
         <hr />
         {'Preview'}
         <br />
         <ReactMarkdown source={this.addLineBreaks()} />
+        <hr />
+        <button
+            onClick={this.handleSaveKudo.bind(this)}
+        >
+          {'Send Kudos!'}
+        </button>
       </div>
     )
   }
@@ -54,7 +65,7 @@ KudoCardEditor.propTypes = {
 }
 
 KudoCardEditor.defaultProps = {
-  content: 'thanks for your support!'
+  content: '**thanks for your support!**'
 }
 
 export default KudoCardEditor
