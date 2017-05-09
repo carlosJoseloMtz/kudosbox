@@ -1,0 +1,9 @@
+{
+  "name": "Kudos Box",
+  "shortName": "Kudos!",
+  "version": "1.0.0",
+  "default_locale": "en",
+  "description": "Kudo anyone from your team for being awesome to you / the team! :)",
+  "author": "nopalcode",
+  "theme_color": "#2196F3"
+}
