@@ -1,5 +1,6 @@
 import React from 'react'
 import KudoCardEditor from '../components/KudoCardEditor'
+import {pushNotification} from '../services/NotifyLib'
 import TeamList from '../components/TeamList'
 
 export default class Home extends React.Component {
@@ -7,6 +8,10 @@ export default class Home extends React.Component {
   constructor (props) {
     super(props)
     this.state = {displayKudoEditor: false}
+  }
+
+  componentDidMount () {
+    pushNotification('yaaay', null, 'such title')
   }
 
   shouldComponentUpdate () {

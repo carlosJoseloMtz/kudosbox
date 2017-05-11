@@ -6,7 +6,7 @@
   "scripts": {
     "build:dev": "eslint ./app/ -c eslint-dev.json && webpack",
     "build:prod": "eslint ./app/ && webpack -p",
-    "local": "eslint ./app/ -c eslint-dev.json && webpack-dev-server --inline"
+    "local": "eslint ./app/ -c eslint-dev.json && webpack-dev-server --inline --https"
   },
   "author": "ObjectWave Corp.",
   "license": "ISC",

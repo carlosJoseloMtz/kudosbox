@@ -33,11 +33,14 @@
     "one-var": [0],
     "no-undefined": [0],
     "react/no-array-index-key": [0],
+    "no-underscore-dangle": [0],
     "no-ternary": [0]
   },
 
   "globals": {
     "document": true,
-    "console": true
+    "console": true,
+    "window": true,
+    "Notification": true
   }
 } 
