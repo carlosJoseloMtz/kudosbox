@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "build:dev": "eslint ./app/ -c eslint-dev.json && webpack",
-    "build:prod": "eslint ./app/ && webpack -p",
+    "build:prod": "eslint -c eslint-dev.json ./app/ && webpack -p",
     "local": "eslint ./app/ -c eslint-dev.json && webpack-dev-server --inline --https"
   },
   "author": "ObjectWave Corp.",
