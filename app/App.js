@@ -11,21 +11,23 @@ export default () => (
       <div>
         <Header />
         <hr />
-        <Route
-            component={Home}
-            exact
-            path="/"
-        />
-        <Route
-            component={Login}
-            exact
-            path="/auth"
-        />
-        <Route
-            component={About}
-            exact
-            path="/about"
-        />
+        <div className="app-container">
+          <Route
+              component={Home}
+              exact
+              path="/"
+          />
+          <Route
+              component={Login}
+              exact
+              path="/auth"
+          />
+          <Route
+              component={About}
+              exact
+              path="/about"
+          />
+        </div>
       </div>
     </Router>
   </div>
