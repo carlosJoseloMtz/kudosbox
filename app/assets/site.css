@@ -88,3 +88,32 @@ button:disabled {
   opacity: .6;
   box-shadow: none;
 }
+
+button.success {
+  background-color: #00897B;
+  color: white;
+}
+
+button.action {
+  background-color: #01579B;
+  color: white;
+}
+
+ul.team-members {
+  padding: 0px;
+  margin: 0px;
+}
+
+ul.team-members li {
+  display: block;
+  padding: 10px;
+}
+
+ul.team-members li:hover {
+  cursor: pointer;
+  background-color: #FAFAFA;
+}
+
+ul.team-members li.selected {
+  background-color: #4DB6AC;
+}

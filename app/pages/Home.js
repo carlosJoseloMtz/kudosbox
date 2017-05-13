@@ -46,7 +46,10 @@ export default class Home extends React.Component {
         <p>{'Hey there man / woman!'}</p>
         <p>{'Give it up for someone! :)'}</p>
         <hr />
-        <button onClick={this.handleThankSomeoneClick.bind(this)}>
+        <button
+            className="success"
+            onClick={this.handleThankSomeoneClick.bind(this)}
+        >
           {'Tell someone how awesome he/she\'s been to the team'}
         </button>
         <hr />

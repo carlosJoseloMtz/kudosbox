@@ -1,6 +1,19 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 import ReactMarkdown from 'react-markdown'
+import TeamMembersList from './TeamMembersList'
+
+const members = []
+
+members.push({
+  id: 'teammemberid1',
+  name: 'aracely aguilar'
+})
+
+members.push({
+  id: 'teammemberid2',
+  name: 'carlos martinez'
+})
 
 class KudoCardEditor extends React.Component {
 
@@ -30,13 +43,30 @@ class KudoCardEditor extends React.Component {
     return this.state.content.split('\n').join('<br />')
   }
 
+  handleOnSelectedTeamMember (mmbr) {
+    const id = mmbr.target.getAttribute('data-mmbr-id')
+
+    const member = members.find((itm) => {
+      return itm.id === id
+    })
+
+    console.log('selecting team member', member)
+  }
+
   render () {
     const textAreaStyle = {
       maxWidth: '100%'
     }
 
+
     return (
       <div>
+        <h2>{'Your team members :)'}</h2>
+        <TeamMembersList
+            handleOnMemberSelected={this.handleOnSelectedTeamMember.bind(this)}
+            members={members}
+        />
+        <hr />
         <button onClick={this.props.handleClose}>{'X'}</button>
         <textarea
             defaultValue={this.state.content}
@@ -50,6 +80,7 @@ class KudoCardEditor extends React.Component {
         <ReactMarkdown source={this.addLineBreaks()} />
         <hr />
         <button
+            className="action"
             onClick={this.handleSaveKudo.bind(this)}
         >
           {'Send Kudos!'}
