@@ -39,24 +39,24 @@ class Header extends React.Component {
           <ul className={this.getMenuClass()}>
             <li>
               <Link
-                onClick={this.handleMenuClick.bind(this)}
-                to="/auth"
+                  onClick={this.handleMenuClick.bind(this)}
+                  to="/auth"
               >
                 {'Login'}
               </Link>
             </li>
             <li>
               <Link
-                onClick={this.handleMenuClick.bind(this)}
-                to="/"
+                  onClick={this.handleMenuClick.bind(this)}
+                  to="/"
               >
                 {'Home'}
               </Link>
             </li>
             <li>
               <Link
-                onClick={this.handleMenuClick.bind(this)}
-                to="/about"
+                  onClick={this.handleMenuClick.bind(this)}
+                  to="/about"
               >
                 {'About'}
               </Link>
